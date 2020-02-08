@@ -20,6 +20,7 @@
 		<java.version>1.8</java.version>
 		<spring-boot-admin.version>2.1.6</spring-boot-admin.version>
 		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
 	</properties>
 
 	<dependencies>
@@ -104,18 +105,7 @@
 				<artifactId>elasticsearch</artifactId>
 				<version>6.2.4</version>
 			</dependency>
-			<!--数据库连接-->
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>1.1.12</version>
-			</dependency>
-			<!--hbase依赖-->
-			<dependency>
-				<groupId>org.apache.hbase</groupId>
-				<artifactId>hbase-client</artifactId>
-				<version>1.2.0</version>
-			</dependency>
+
 
             <dependency>
                 <groupId>io.micrometer</groupId>
@@ -126,6 +116,15 @@
                 <groupId>io.prometheus</groupId>
                 <artifactId>simpleclient_spring_web</artifactId>
                 <version>0.5.0</version>
+            </dependency>
+
+            <!--cloud alibaba-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
 			<!--spring boot admin-->
